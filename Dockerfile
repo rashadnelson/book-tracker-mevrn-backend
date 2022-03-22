@@ -1,5 +1,5 @@
 # Image layer - downloaded the Node image from Docker Hub
-FROM node:16 
+FROM node:16.14.2-alpine
 
 # Image layer - Set the working directory to /app
 WORKDIR /app
@@ -17,4 +17,4 @@ COPY . ./
 EXPOSE 5000
 
 # Image layer - setting Node entry point.  Assigned to the container when we actually run it.
-CMD ["node", "server.js"]
+CMD ["npm", "run", "start"]
